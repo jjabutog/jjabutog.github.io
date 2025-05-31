@@ -1,6 +1,6 @@
 # Large unoptimized image files
-img/unoptimized/*.jpg
-
+img/unoptimized/
+img/old/
 # Node.js development files
 node_modules/
 optimize-images.js
