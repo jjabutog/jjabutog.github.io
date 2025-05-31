@@ -3,37 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <meta name="description" content="Join us in celebrating the wedding of JJ and Ai on September 26, 2025 in Antipolo City" />
+  <meta name="theme-color" content="#eae4cc" />
   <title>Ai & JJ are getting Married!</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section class="intro">
-    <div class="container">
-      <div class="row">
-        <div>
-          <h1 class="overlay">JJ & Ai</h1>
-          <h2 class="overlay-subtext">are getting married</h2>  
+  <header class="hero" role="banner">
+    <div class="hero__container">
+      <div class="hero__content">
+        <div class="hero__title">
+          <h1 class="hero__heading">JJ & Ai</h1>
+          <p class="hero__subheading">are getting married</p>  
         </div>
       </div>
-      <div class="overlay-bottom">
-        <p>September 26, 2025</p>
-        <p>Antipolo City</p>
+      <div class="hero__details">
+        <time datetime="2025-09-26" class="hero__date">September 26, 2025</time>
+        <address class="hero__location">Antipolo City</address>
       </div>
     </div>
-  </section>
-  <section class="second">
-    <div class="second-pic">
-        <p>Join us in celebrating our union</p>
-    </div>
-  </section>
-  <section class="third">
-    <div class="left-side">
-      <h1>OUR STORY</h1>
-      <p> third</p>
-    </div>
-    <div class="right-side">
+  </header>
 
-    </div>
-  </section>
+  <main role="main">
+    <section class="invitation" aria-labelledby="invitation-text">
+      <div class="invitation__content">
+        <p id="invitation-text" class="invitation__text">Join us in celebrating our union</p>
+      </div>
+    </section>
+
+    <section class="story" aria-labelledby="story-heading">
+      <div class="story__content">
+        <h2 id="story-heading" class="story__heading">OUR STORY</h2>
+        <p class="story__text">third</p>
+      </div>
+      <div class="story__media">
+        <!-- Reserved for future media content -->
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <!-- Add footer content if needed -->
+  </footer>
 </body>
 </html>
+
