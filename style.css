@@ -1,0 +1,204 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+  flex-direction: column;  /* stack items vertically */
+  position: relative; 
+  width: 100vw;
+  height: 100vh;
+}
+
+.intro {
+  color: #eae4cc;
+  background-image: url('img/page-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.second {
+  background-color: #eae4cc;
+}
+
+.third {
+  background-color: #95b1c3;
+}
+
+.second div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('img/page-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 80%;
+}
+
+.second p {
+  align-self: last baseline;
+  padding-bottom: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin: 0;
+  font-family: 'Pinyon Script';
+  color: #eae4cc;;
+  font-size: 3rem;
+  font-style: oblique;
+  font-weight: 100;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* push top and bottom apart */
+  height: 100%;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;  /* Take available space */
+  text-align: center;
+}
+
+.overlay-bottom {
+  text-align: center;
+  font-family: 'TT Hoves';
+  font-size: 1.5rem;
+  padding-bottom: 2em;
+}
+/*
+
+.intro {
+  background-image: url('img/page-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;  
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+  position: relative; 
+  color:#eae4cc;
+}
+
+.row {
+  text-align: center;
+}
+
+*/
+h1.overlay {
+  margin: 0;
+  border-radius: 1em;
+  font-family: 'Astone Nouvea';
+  font-size: 15em;
+  font-weight: 1;
+}
+
+h2.overlay-subtext {
+  margin: 0;
+  font-family: 'Pinyon Script';
+  font-size: 3rem;
+  font-weight: 100;
+  font-style: oblique;
+}
+
+/*.overlay-bottom {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: 3em;
+  border: 3em solid green;
+} */
+
+/*.overlay-bottom { */
+ /* position: absolute;  /* change from relative to absolute */
+ /* bottom: 2em;         /* place it near the bottom */
+ /* left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  color: #eae4cc; */
+  /* remove border unless it's for debugging */
+  /* border: 3em solid green; */
+/*}*/
+@font-face {
+  font-family: 'TT Hoves';
+  src: url('fonts/TT-Hoves-Pro-Trial-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Astone Nouvea';
+  src: url('fonts/Astone-Nouvea.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pinyon Script';
+  src: url('fonts/PinyonScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: lighter;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero .hero-content {
+      padding-top: 50%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .hero .hero-content {
+      padding-top: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero .hero-content {
+      padding-top: 110%;
+  }
+  
+  .hero .hero-content img {
+      width: 65%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero .hero-content {
+      padding-top: 130%;
+  }
+
+  .rsvp {
+      padding-top: 20px;
+  }
+  h1.overlay {
+    font-size: 5em;
+  }
+  h2.overlay-subtext {
+    font-size: 2em;
+  }
+  .overlay-bottom {
+    font-size: 1em;
+  }
+  .intro {
+    background-image: url('img/page-1-sm-1.jpg');
+  }
+}
