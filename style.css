@@ -85,6 +85,8 @@ section {
 /* Invitation section */
 .invitation {
   background-color: #eae4cc;
+  height: 100vh;
+  min-height: 100vh;
 }
 
 .invitation__content {
@@ -97,7 +99,7 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   width: 80%;
-  height: 80%;
+  height: 80vh;
 }
 
 .invitation__text {
@@ -467,6 +469,20 @@ section {
     margin: 0.1em 0;
     line-height: 1.2;
   }
+
+  .invitation {
+    height: 100vh;
+  }
+
+  .invitation__content {
+    width: 90%;
+    height: 90vh;
+  }
+
+  .invitation__text {
+    font-size: 1.5rem;
+    padding-bottom: 3%;
+  }
 }
 
 /* Ultra small devices */
@@ -499,6 +515,14 @@ section {
   .venue-card__address,
   .venue-card__time {
     font-size: 0.6em;
+  }
+
+  .invitation__content {
+    width: 95%;
+  }
+
+  .invitation__text {
+    font-size: 1.2rem;
   }
 }
 
