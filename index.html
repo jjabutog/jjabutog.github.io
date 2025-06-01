@@ -40,13 +40,47 @@
         <!-- Reserved for future media content -->
       </div>
     </section>
-    <section class="wedding-venues">
+    <section class="wedding-venues" aria-labelledby="wedding-venues-heading">
       <div class="wedding-venues__content">
-        <h2 id="wedding-venues-heading" class="wedding-venues__heading">Wedding Venues</h2>
-        <p class="wedding-venues__text">fourth</p>
-      </div>
-      <div class="wedding-venues__media">
-        <!-- Reserved for future media content -->
+        <h2 id="wedding-venues-heading" class="wedding-venues__heading">Wedding Venue</h2>
+        <div class="wedding-venues__grid">
+          <div class="venue-card">
+            <div class="venue-card__image">
+              <img 
+                srcset="img/optimized/church-photo-small.png 800w,
+                        img/optimized/church-photo-medium.png 1200w,
+                        img/optimized/church-photo-large.png 1920w"
+                sizes="(max-width: 768px) 100vw,
+                       (max-width: 1200px) 45vw,
+                       400px"
+                src="img/optimized/church-photo-medium.png" 
+                alt="Church venue" 
+                class="venue-card__photo">
+            </div>
+            <h3 class="venue-card__title">Church Ceremony</h3>
+            <p class="venue-card__details">Diocesan Shrine and Parish of Saint Pio of Pietrelcina</p>
+            <p class="venue-card__address">Sumulong Highway, Antipolo City</p>
+            <p class="venue-card__time">10:00 AM</p>
+          </div>
+          <div class="venue-card">
+            <div class="venue-card__image">
+              <img 
+                srcset="img/optimized/reception-icon-small.png 800w,
+                        img/optimized/reception-icon-medium.png 1200w,
+                        img/optimized/reception-icon-large.png 1920w"
+                sizes="(max-width: 768px) 100vw,
+                       (max-width: 1200px) 45vw,
+                       400px"
+                src="img/optimized/reception-icon-medium.png" 
+                alt="Reception venue" 
+                class="venue-card__photo">
+            </div>
+            <h3 class="venue-card__title">Reception</h3>
+            <p class="venue-card__details">Jardin De Miramar</p>
+            <p class="venue-card__address">Brgy. San Isidro, Antipolo City</p>
+            <p class="venue-card__time">1:00 PM</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
