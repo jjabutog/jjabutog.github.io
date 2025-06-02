@@ -187,9 +187,13 @@ section {
 
 .wedding-venues__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2em;
   padding: 0 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+  justify-content: center;
 }
 
 .venue-card {
@@ -200,6 +204,13 @@ section {
   padding: 2em;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .venue-card:hover {
@@ -212,11 +223,17 @@ section {
   margin-bottom: 1.5em;
   border-radius: 8px;
   overflow: hidden;
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/9;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 320px;
+  max-height: 350px;
+  padding: 0.5em;
 }
 
 .venue-card__photo {
@@ -231,10 +248,15 @@ section {
   transform: scale(1.05);
 }
 
+.venue-card:hover .venue-card__image {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
 .venue-card__title {
   font-family: 'Pinyon Script';
   color: #2f556e;
-  font-size: 3em;
+  font-size: 2.5em;
   font-style: lighter;
   margin: 0 0 0.5em 0;
   text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
@@ -254,6 +276,14 @@ section {
   color: #557a96;
   margin: 0.2em 0;
   text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.church-image {
+  background-image: url('img/optimized/church-photo-large.png');
+}
+
+.reception-image {
+  background-image: url('img/optimized/reception-icon-large.png');
 }
 
 /* Font faces */
@@ -298,6 +328,16 @@ section {
   .invitation__content {
     background-image: url('img/optimized/page-2-medium.jpg');
   }
+  .church-image {
+    background-image: url('img/optimized/church-photo-medium.png');
+  }
+  .reception-image {
+    background-image: url('img/optimized/reception-icon-medium.png');
+  }
+  .venue-card__image {
+    min-height: 280px;
+    max-height: 300px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -335,6 +375,16 @@ section {
     width: 100%;
     height: 50vh;
   }
+  .church-image {
+    background-image: url('img/optimized/church-photo-small.png');
+  }
+  .reception-image {
+    background-image: url('img/optimized/reception-icon-small.png');
+  }
+  .venue-card__image {
+    min-height: 160px;
+    max-height: 180px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -371,16 +421,23 @@ section {
   .wedding-venues__grid {
     grid-template-columns: 1fr;
     gap: 2em;
-    padding: 0;
+    padding: 0 1em;
+    max-width: 500px;
   }
 
   .venue-card {
-    max-width: 500px;
-    margin: 0 auto;
+    padding: 1.5em;
   }
 
   .venue-card__image {
-    aspect-ratio: 16/9;
+    min-height: 240px;
+    max-height: 260px;
+  }
+  .church-image {
+    background-image: url('img/optimized/church-photo-small.png');
+  }
+  .reception-image {
+    background-image: url('img/optimized/reception-icon-small.png');
   }
 }
 
@@ -393,6 +450,10 @@ section {
     font-size: 1.8em;
     letter-spacing: 0.08em;
     margin: 0 0 0.8em 0;
+  }
+
+  .wedding-venues__grid {
+    padding: 0 0.8em;
   }
 
   .venue-card {
@@ -444,8 +505,9 @@ section {
   }
 
   .venue-card__image {
-    margin-bottom: 0.5em;
-    aspect-ratio: 16/9;
+    min-height: 180px;
+    max-height: 200px;
+    padding: 0.3em;
   }
 
   .venue-card__photo {
@@ -482,6 +544,11 @@ section {
   .invitation__text {
     font-size: 1.5rem;
     padding-bottom: 3%;
+  }
+
+  .venue-card__image {
+    min-height: 160px;
+    max-height: 180px;
   }
 }
 
@@ -523,6 +590,12 @@ section {
 
   .invitation__text {
     font-size: 1.2rem;
+  }
+
+  .venue-card__image {
+    min-height: 160px;
+    max-height: 180px;
+    padding: 0.2em;
   }
 }
 
