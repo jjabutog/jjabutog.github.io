@@ -84,7 +84,10 @@ section {
 
 /* Invitation section */
 .invitation {
-  background-color: #eae4cc;
+  background-image: url('img/optimized/beige-background-large.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   min-height: 100vh;
 }
@@ -117,7 +120,10 @@ section {
 
 /* Story section */
 .story {
-  background-color: #95b1c3;
+  background-image: url('img/optimized/beige-background-large.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -131,16 +137,32 @@ section {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 2em;
+  position: relative;
+  z-index: 2;
+}
+
+.story__media {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  height: 100%;
 }
 
 .story__heading {
-  font-family: 'TT Hoves';
-  font-size: 2.5em;
+  font-family: 'Astone Nouvea';
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 100;
   margin: 0;
-  color: #ffffff;
+  color: #2f556e;
+  font-style: normal;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+  align-self: flex-start;
+  margin-top: 10%;
 }
 
 .story__text {
@@ -149,14 +171,67 @@ section {
   margin-top: 1em;
 }
 
-.story__media {
-  flex: 1;
+.story__photo-container {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
   height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+}
+
+.story__photo {
+  width: 300px;
+  height: 400px;
+  border-radius: 12px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+.story__photo:hover {
+  transform: scale(1.05);
+}
+
+.left-window-photo {
+  background-image: url('img/optimized/left-window-photo-large.png');
+  background-size: contain;
+}
+
+.middle-window-photo {
+  background-image: url('img/optimized/middle-window-photo-large.png');
+  background-size: contain;
+}
+
+.right-window-photo {
+  background-image: url('img/optimized/right-window-photo-large.png');
+  background-size: contain;
+}
+
+.left-hand-drawing, .right-hand-drawing {
+  width: 150px;  /* 50% of the 300px window photo width */
+  height: 200px; /* 50% of the 400px window photo height */
+  background-size: contain;
+}
+
+.left-hand-drawing {
+  background-image: url('img/optimized/left-hand-drawing-large.png');
+}
+
+.right-hand-drawing {
+  background-image: url('img/optimized/right-hand-drawing-large.png');
 }
 
 /* Wedding venues section */
 .wedding-venues {
-  background-color: #afd0e5;
+  background-image: url('img/optimized/sky-background-large.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   min-height: auto;
   display: flex;
@@ -387,6 +462,18 @@ section {
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .story__photo {
+    width: 250px;
+    height: 333px;
+  }
+  
+  .left-hand-drawing, .right-hand-drawing {
+    width: 125px;
+    height: 166px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .wedding-venues {
     padding: 3em 1.5em;
@@ -403,6 +490,21 @@ section {
 
   .venue-card__details {
     font-size: 1.1em;
+  }
+
+  .story__photo-container {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .story__photo {
+    width: 250px;
+    height: 333px;
+  }
+
+  .left-hand-drawing, .right-hand-drawing {
+    width: 125px;  /* 50% of the 250px responsive window photo width */
+    height: 166px; /* 50% of the 333px responsive window photo height */
   }
 }
 
@@ -605,6 +707,11 @@ section {
     min-height: auto;
     height: auto;
     padding: 1em 0;
+  }
+
+  .story {
+    background-image: url('img/optimized/beige-background-large.jpeg');
+    background-repeat: repeat;
   }
 
   .wedding-venues {
