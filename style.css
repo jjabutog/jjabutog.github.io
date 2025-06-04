@@ -233,7 +233,7 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: auto;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -243,6 +243,7 @@ section {
 }
 
 .wedding-venues__content {
+  flex: 1;
   width: 100%;
   max-width: 1200px;
   text-align: center;
@@ -484,6 +485,12 @@ section {
   .wedding-venues__media {
     width: 100%;
     height: 50vh;
+  }
+  .wedding-venues__grid {
+    padding: 20%;
+  }
+  .venue-card {
+    padding: 20%;
   }
   .church-image {
     background-image: url('img/optimized/church-photo-small.png');
