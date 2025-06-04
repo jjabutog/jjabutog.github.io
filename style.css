@@ -555,6 +555,7 @@ section {
   border-radius: 12px;
   padding: 3em;
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -609,6 +610,114 @@ section {
 
 .bridesmaids-groomsmen-image {
   background-image: url('img/optimized/entourage-dresscode-men-large.png');
+}
+
+/* Principal Sponsors section */
+.principal-sponsors {
+  background-image: url('img/optimized/beige-background-large.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 2em;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.principal-sponsors__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.principal-sponsors__heading {
+  font-family: 'Astone Nouvea';
+  font-style: normal;
+  font-weight: 200;
+  color: #6d532a;
+  font-size: 4.5em;
+  margin: 0 0 1.5em 0;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.principal-sponsors__grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3em;
+  padding: 0 10%;
+  width: 100%;
+  margin: 0 auto;
+  align-items: start;
+  justify-content: center;
+}
+
+.principal-sponsors-card {
+  border-radius: 12px;
+  padding: 3em;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.principal-sponsors-card__title {
+  font-family: 'Pinyon Script';
+  color: #6d532a;
+  font-size: 3em;
+  font-style: lighter;
+  margin: 0 0 0.8em 0;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.principal-sponsors-card__image {
+  width: 100%;
+  margin-bottom: 2em;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 280px;
+  max-height: 320px;
+}
+
+.principal-sponsors-card__description {
+  font-family: 'TT Hoves';
+  color: #6d532a;
+  font-size: 1.4em;
+  margin: 0.5em 0;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.sponsors-ladies-image {
+  background-image: url('img/optimized/principal-sponsors-dresscode-women-large.png');
+}
+
+.sponsors-color-palette-image {
+  background-image: url('img/optimized/principal-sponsor-color-palette-default-large.png');
+}
+
+.sponsors-gentlemen-image {
+  background-image: url('img/optimized/principal-sponsor-dresscode-men-large.png');
 }
 
 /* Font faces */
@@ -802,6 +911,23 @@ section {
   .entourage-card__description {
     font-size: 1.2em;
   }
+
+  .principal-sponsors-card {
+    padding: 2em;
+  }
+
+  .principal-sponsors-card__title {
+    font-size: 2.5em;
+  }
+
+  .principal-sponsors-card__image {
+    min-height: 240px;
+    max-height: 280px;
+  }
+
+  .principal-sponsors-card__description {
+    font-size: 1.2em;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -889,6 +1015,32 @@ section {
   }
 
   .entourage-card__image {
+    min-height: 220px;
+    max-height: 260px;
+  }
+
+  .principal-sponsors {
+    height: auto;
+    min-height: 100vh;
+    padding: 4em 1em;
+  }
+
+  .principal-sponsors__heading {
+    font-size: 2.8em;
+    margin: 0 0 1em 0;
+  }
+
+  .principal-sponsors__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    padding: 0 10%;
+  }
+
+  .principal-sponsors-card {
+    padding: 2em;
+  }
+
+  .principal-sponsors-card__image {
     min-height: 220px;
     max-height: 260px;
   }
@@ -983,6 +1135,38 @@ section {
   }
 
   .entourage-card__description {
+    font-size: 1.1em;
+  }
+
+  .principal-sponsors {
+    padding: 2em 0.8em;
+  }
+
+  .principal-sponsors__heading {
+    font-size: 1.8em;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.8em 0;
+  }
+
+  .principal-sponsors__grid {
+    grid-template-columns: 1fr;
+    padding: 0 10%;
+  }
+
+  .principal-sponsors-card {
+    padding: 1.5em;
+  }
+
+  .principal-sponsors-card__title {
+    font-size: 2em;
+  }
+
+  .principal-sponsors-card__image {
+    min-height: 200px;
+    max-height: 240px;
+  }
+
+  .principal-sponsors-card__description {
     font-size: 1.1em;
   }
 }
@@ -1105,6 +1289,32 @@ section {
     margin: 0.15em 0;
     line-height: 1.2;
   }
+
+  .principal-sponsors {
+    padding: 1em 0.3em;
+    min-height: auto;
+    height: auto;
+  }
+
+  .principal-sponsors-card {
+    padding: 0.5em;
+  }
+
+  .principal-sponsors-card__image {
+    min-height: 160px;
+    max-height: 200px;
+  }
+
+  .principal-sponsors-card__title {
+    font-size: 1.2em;
+    margin: 0 0 0.2em 0;
+  }
+
+  .principal-sponsors-card__description {
+    font-size: 0.8em;
+    margin: 0.15em 0;
+    line-height: 1.2;
+  }
 }
 
 /* Ultra small devices */
@@ -1162,6 +1372,15 @@ section {
   }
 
   .entourage__heading {
+    font-size: 1em;
+    margin: 0 0 0.4em 0;
+  }
+
+  .principal-sponsors {
+    padding: 0.8em 0.2em;
+  }
+
+  .principal-sponsors__heading {
     font-size: 1em;
     margin: 0 0 0.4em 0;
   }
