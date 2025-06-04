@@ -413,6 +413,8 @@ section {
 }
 
 .guest-attire__content {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 1200px;
   text-align: center;
@@ -428,6 +430,79 @@ section {
   letter-spacing: 0.15em;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+.guest-attire__grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  padding: 0 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+  justify-content: center;
+}
+
+.guest-attire-card {
+
+  border-radius: 12px;
+  padding: 2em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.guest-attire-card__title {
+  font-family: 'Pinyon Script';
+  color: #6d532a;
+  font-size: 2.5em;
+  font-style: lighter;
+  margin: 0 0 0.5em 0;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.guest-attire-card__image {
+  width: 100%;
+  margin-bottom: 1.5em;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  max-height: 250px;
+}
+
+.guest-attire-card__description {
+  font-family: 'TT Hoves';
+  color: #6d532a;
+  font-size: 1.2em;
+  margin: 0.3em 0;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.ladies-image {
+  background-image: url('img/optimized/guest-dresscode-women-large.png');
+}
+
+.semi-formal-image {
+  background-image: url('img/optimized/guest-color-palette-default-large.png');
+}
+
+.gentlemen-image {
+  background-image: url('img/optimized/guest-dresscode-men-large.png');
 }
 
 /* Font faces */
@@ -582,6 +657,19 @@ section {
     width: 125px;  /* 50% of the 250px responsive window photo width */
     height: 166px; /* 50% of the 333px responsive window photo height */
   }
+
+  .guest-attire__grid {
+    gap: 1.5em;
+    padding: 0 1em;
+  }
+
+  .guest-attire-card__title {
+    font-size: 2em;
+  }
+
+  .guest-attire-card__description {
+    font-size: 1.1em;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -631,6 +719,22 @@ section {
   .reception-image {
     background-image: url('img/optimized/reception-icon-small.png');
   }
+
+  .guest-attire__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    padding: 0 1em;
+    max-width: 600px;
+  }
+
+  .guest-attire-card {
+    padding: 1.5em;
+  }
+
+  .guest-attire-card__image {
+    min-height: 180px;
+    max-height: 220px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -669,6 +773,25 @@ section {
   .venue-card__address,
   .venue-card__time {
     font-size: 0.8em;
+  }
+
+  .guest-attire__grid {
+    grid-template-columns: 1fr;
+    padding: 20%;
+  }
+
+  .guest-attire-card {
+    padding: 1em;
+  }
+
+  .guest-attire-card__title {
+    font-size: 1.8em;
+    margin: 0 0 0.3em 0;
+  }
+
+  .guest-attire-card__description {
+    font-size: 0.9em;
+    line-height: 1.3;
   }
 }
 
@@ -743,6 +866,26 @@ section {
   .venue-card__image {
     min-height: 160px;
     max-height: 180px;
+  }
+
+  .guest-attire-card {
+    padding: 0.5em;
+  }
+
+  .guest-attire-card__image {
+    min-height: 160px;
+    max-height: 200px;
+  }
+
+  .guest-attire-card__title {
+    font-size: 1.2em;
+    margin: 0 0 0.2em 0;
+  }
+
+  .guest-attire-card__description {
+    font-size: 0.8em;
+    margin: 0.15em 0;
+    line-height: 1.2;
   }
 }
 
