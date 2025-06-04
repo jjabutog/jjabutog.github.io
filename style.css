@@ -504,6 +504,113 @@ section {
   background-image: url('img/optimized/guest-dresscode-men-large.png');
 }
 
+/* Entourage section */
+.entourage {
+  background-image: url('img/optimized/beige-background-large.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 2em;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.entourage__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.entourage__heading {
+  font-family: 'Astone Nouvea';
+  font-style: normal;
+  font-weight: 200;
+  color: #6d532a;
+  font-size: 4.5em;
+  margin: 0 0 1.5em 0;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.entourage__grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3em;
+  padding: 0 10%;
+  width: 100%;
+  margin: 0 auto;
+  align-items: start;
+  justify-content: center;
+}
+
+.entourage-card {
+  border-radius: 12px;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.entourage-card__title {
+  font-family: 'Pinyon Script';
+  color: #6d532a;
+  font-size: 3em;
+  font-style: lighter;
+  margin: 0 0 0.8em 0;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.entourage-card__image {
+  width: 100%;
+  margin-bottom: 2em;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 280px;
+  max-height: 320px;
+}
+
+.entourage-card__description {
+  font-family: 'TT Hoves';
+  color: #6d532a;
+  font-size: 1.4em;
+  margin: 0.5em 0;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.principal-sponsors-image {
+  background-image: url('img/optimized/entourage-dresscode-large.png');
+}
+
+.formal-image {
+  background-image: url('img/optimized/entourage-color-palette-default-large.png');
+}
+
+.bridesmaids-groomsmen-image {
+  background-image: url('img/optimized/entourage-dresscode-men-large.png');
+}
+
 /* Font faces */
 @font-face {
   font-family: 'TT Hoves';
@@ -678,6 +785,23 @@ section {
   .guest-attire-card__description {
     font-size: 1.2em;
   }
+
+  .entourage-card {
+    padding: 2em;
+  }
+
+  .entourage-card__title {
+    font-size: 2.5em;
+  }
+
+  .entourage-card__image {
+    min-height: 240px;
+    max-height: 280px;
+  }
+
+  .entourage-card__description {
+    font-size: 1.2em;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -742,6 +866,32 @@ section {
     min-height: 220px;
     max-height: 260px;
   }
+
+  .entourage {
+    height: auto;
+    min-height: 100vh;
+    padding: 4em 1em;
+  }
+
+  .entourage__heading {
+    font-size: 2.8em;
+    margin: 0 0 1em 0;
+  }
+
+  .entourage__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    padding: 0 10%;
+  }
+
+  .entourage-card {
+    padding: 2em;
+  }
+
+  .entourage-card__image {
+    min-height: 220px;
+    max-height: 260px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -801,6 +951,38 @@ section {
   }
 
   .guest-attire-card__description {
+    font-size: 1.1em;
+  }
+
+  .entourage {
+    padding: 2em 0.8em;
+  }
+
+  .entourage__heading {
+    font-size: 1.8em;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.8em 0;
+  }
+
+  .entourage__grid {
+    grid-template-columns: 1fr;
+    padding: 0 10%;
+  }
+
+  .entourage-card {
+    padding: 1.5em;
+  }
+
+  .entourage-card__title {
+    font-size: 2em;
+  }
+
+  .entourage-card__image {
+    min-height: 200px;
+    max-height: 240px;
+  }
+
+  .entourage-card__description {
     font-size: 1.1em;
   }
 }
@@ -897,6 +1079,32 @@ section {
     margin: 0.15em 0;
     line-height: 1.2;
   }
+
+  .entourage {
+    padding: 1em 0.3em;
+    min-height: auto;
+    height: auto;
+  }
+
+  .entourage-card {
+    padding: 0.5em;
+  }
+
+  .entourage-card__image {
+    min-height: 160px;
+    max-height: 200px;
+  }
+
+  .entourage-card__title {
+    font-size: 1.2em;
+    margin: 0 0 0.2em 0;
+  }
+
+  .entourage-card__description {
+    font-size: 0.8em;
+    margin: 0.15em 0;
+    line-height: 1.2;
+  }
 }
 
 /* Ultra small devices */
@@ -947,6 +1155,15 @@ section {
     min-height: 160px;
     max-height: 180px;
     padding: 0.2em;
+  }
+
+  .entourage {
+    padding: 0.8em 0.2em;
+  }
+
+  .entourage__heading {
+    font-size: 1em;
+    margin: 0 0 0.4em 0;
   }
 }
 
