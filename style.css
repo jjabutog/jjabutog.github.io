@@ -1477,3 +1477,157 @@ section {
     margin-bottom: 0.5em;
   }
 }
+
+/* FAQs section */
+.faqs {
+  background-color: #5286a8;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 2em;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.faqs__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.faqs__heading {
+  font-family: 'Astone Nouvea';
+  font-style: normal;
+  font-weight: 200;
+  color: #eae4cc;
+  font-size: 4.5em;
+  margin: 0 0 1.5em 0;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.faqs__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  padding: 0 10%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2em;
+  text-align: left;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(109, 83, 42, 0.1);
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+}
+
+.faq-item__question {
+  font-family: 'Pinyon Script';
+  color: #eae4cc;
+  font-size: 2em;
+  margin: 0 0 0.5em 0;
+  font-weight: normal;
+}
+
+.faq-item__answer {
+  font-family: 'TT Hoves';
+  color: #eae4cc;
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .faqs__grid {
+    gap: 1.5em;
+  }
+
+  .faq-item__question {
+    font-size: 1.8em;
+  }
+
+  .faq-item__answer {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .faqs {
+    padding: 3em 1.5em;
+  }
+
+  .faqs__heading {
+    font-size: 2.8em;
+    margin-bottom: 1em;
+  }
+
+  .faqs__grid {
+    grid-template-columns: 1fr;
+    padding: 0 15%;
+  }
+
+  .faq-item {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .faqs {
+    padding: 2em 1em;
+  }
+
+  .faqs__heading {
+    font-size: 2em;
+  }
+
+  .faqs__grid {
+    padding: 0 10%;
+  }
+
+  .faq-item {
+    padding: 1.5em;
+  }
+
+  .faq-item__question {
+    font-size: 1.5em;
+  }
+
+  .faq-item__answer {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .faqs__grid {
+    padding: 0 5%;
+  }
+
+  .faq-item {
+    padding: 1em;
+  }
+
+  .faq-item__question {
+    font-size: 1.3em;
+  }
+
+  .faq-item__answer {
+    font-size: 0.9em;
+  }
+}
