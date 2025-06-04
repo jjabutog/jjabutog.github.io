@@ -446,7 +446,7 @@ section {
 
 .guest-attire-card {
   border-radius: 12px;
-  padding: 2em;
+  padding: 3em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -459,15 +459,15 @@ section {
 .guest-attire-card__title {
   font-family: 'Pinyon Script';
   color: #6d532a;
-  font-size: 2.5em;
+  font-size: 3em;
   font-style: lighter;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 0.8em 0;
   text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
 }
 
 .guest-attire-card__image {
   width: 100%;
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
   border-radius: 8px;
   overflow: hidden;
   aspect-ratio: 1/1;
@@ -478,17 +478,18 @@ section {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 200px;
-  max-height: 250px;
+  min-height: 280px;
+  max-height: 320px;
 }
 
 .guest-attire-card__description {
   font-family: 'TT Hoves';
   color: #6d532a;
-  font-size: 1.2em;
-  margin: 0.3em 0;
+  font-size: 1.4em;
+  margin: 0.5em 0;
   text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
   text-align: center;
+  line-height: 1.4;
 }
 
 .ladies-image {
@@ -661,12 +662,21 @@ section {
     padding: 0 1em;
   }
 
+  .guest-attire-card {
+    padding: 2em;
+  }
+
   .guest-attire-card__title {
-    font-size: 2em;
+    font-size: 2.5em;
+  }
+
+  .guest-attire-card__image {
+    min-height: 240px;
+    max-height: 280px;
   }
 
   .guest-attire-card__description {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 }
 
@@ -725,12 +735,12 @@ section {
   }
 
   .guest-attire-card {
-    padding: 1.5em;
+    padding: 2em;
   }
 
   .guest-attire-card__image {
-    min-height: 180px;
-    max-height: 220px;
+    min-height: 220px;
+    max-height: 260px;
   }
 }
 
@@ -778,17 +788,20 @@ section {
   }
 
   .guest-attire-card {
-    padding: 1em;
+    padding: 1.5em;
   }
 
   .guest-attire-card__title {
-    font-size: 1.8em;
-    margin: 0 0 0.3em 0;
+    font-size: 2em;
+  }
+
+  .guest-attire-card__image {
+    min-height: 200px;
+    max-height: 240px;
   }
 
   .guest-attire-card__description {
-    font-size: 0.9em;
-    line-height: 1.3;
+    font-size: 1.1em;
   }
 }
 
