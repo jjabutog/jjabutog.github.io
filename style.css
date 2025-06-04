@@ -361,6 +361,40 @@ section {
   background-image: url('img/optimized/reception-icon-large.png');
 }
 
+/* Wedding timeline section */
+.wedding-timeline {
+  background-image: url('img/optimized/sky-background-large.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 2em;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.wedding-timeline__content {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.wedding-timeline__heading {
+  font-family: 'Astone Nouvea';
+  font-style: normal;
+  font-weight: 200;
+  color: #2f556e;
+  font-size: 3.5em;
+  margin: 0 0 1.5em 0;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
 /* Font faces */
 @font-face {
   font-family: 'TT Hoves';
@@ -516,7 +550,18 @@ section {
     padding: 4em 1em;
   }
 
+  .wedding-timeline {
+    height: auto;
+    min-height: 100vh;
+    padding: 4em 1em;
+  }
+
   .wedding-venues__heading {
+    font-size: 2.8em;
+    margin: 0 0 1em 0;
+  }
+
+  .wedding-timeline__heading {
     font-size: 2.8em;
     margin: 0 0 1em 0;
   }
@@ -549,7 +594,17 @@ section {
     padding: 2em 0.8em;
   }
 
+  .wedding-timeline {
+    padding: 2em 0.8em;
+  }
+
   .wedding-venues__heading {
+    font-size: 1.8em;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.8em 0;
+  }
+
+  .wedding-timeline__heading {
     font-size: 1.8em;
     letter-spacing: 0.08em;
     margin: 0 0 0.8em 0;
@@ -587,13 +642,19 @@ section {
     height: auto;
   }
 
-  section {
+  .wedding-timeline {
+    padding: 1em 0.3em;
     min-height: auto;
     height: auto;
-    padding: 1em 0;
   }
 
   .wedding-venues__heading {
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.5em 0;
+  }
+
+  .wedding-timeline__heading {
     font-size: 1.2em;
     letter-spacing: 0.05em;
     margin: 0 0 0.5em 0;
@@ -661,7 +722,16 @@ section {
     padding: 0.8em 0.2em;
   }
 
+  .wedding-timeline {
+    padding: 0.8em 0.2em;
+  }
+
   .wedding-venues__heading {
+    font-size: 1em;
+    margin: 0 0 0.4em 0;
+  }
+
+  .wedding-timeline__heading {
     font-size: 1em;
     margin: 0 0 0.4em 0;
   }
