@@ -1005,13 +1005,15 @@ section {
   }
 
   .guest-attire__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 2em;
-    padding: 0 10%;
+    padding: 0 15%;
   }
 
   .guest-attire-card {
     padding: 2em;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .guest-attire-card__image {
@@ -1031,13 +1033,15 @@ section {
   }
 
   .entourage__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 2em;
-    padding: 0 10%;
+    padding: 0 15%;
   }
 
   .entourage-card {
     padding: 2em;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .entourage-card__image {
@@ -1057,13 +1061,15 @@ section {
   }
 
   .principal-sponsors__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 2em;
-    padding: 0 10%;
+    padding: 0 15%;
   }
 
   .principal-sponsors-card {
     padding: 2em;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .principal-sponsors-card__image {
@@ -1120,7 +1126,6 @@ section {
   }
 
   .guest-attire__grid {
-    grid-template-columns: 1fr;
     padding: 0 10%;
   }
 
@@ -1152,7 +1157,6 @@ section {
   }
 
   .entourage__grid {
-    grid-template-columns: 1fr;
     padding: 0 10%;
   }
 
@@ -1184,7 +1188,6 @@ section {
   }
 
   .principal-sponsors__grid {
-    grid-template-columns: 1fr;
     padding: 0 10%;
   }
 
@@ -1359,6 +1362,22 @@ section {
   .principal-sponsors__footer-text {
     font-size: 1.2em;
     letter-spacing: 0.05em;
+  }
+
+  .principal-sponsors__grid {
+    padding: 0 5%;
+  }
+
+  .principal-sponsors-card {
+    padding: 1em;
+  }
+
+  .guest-attire__grid {
+    padding: 0 5%;
+  }
+
+  .entourage__grid {
+    padding: 0 5%;
   }
 }
 
