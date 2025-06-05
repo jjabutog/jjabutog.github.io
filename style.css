@@ -822,8 +822,12 @@ section {
   .story__content,
   .story__media {
     width: 100%;
-    height: 50vh;
   }
+
+  .story__media {
+    padding-bottom: 5%;
+  }
+
   .wedding-venues {
     flex-direction: column;
   }
