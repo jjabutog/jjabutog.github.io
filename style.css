@@ -84,7 +84,7 @@ section {
 
 /* Invitation section */
 .invitation {
-  background-image: url('img/optimized/beige-background-large.jpeg');
+  background-image: url('img/optimized/beige-background-large.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -120,7 +120,7 @@ section {
 
 /* Story section */
 .story {
-  background-image: url('img/optimized/beige-background-large.jpeg');
+  background-image: url('img/optimized/beige-background-large.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -228,7 +228,7 @@ section {
 
 /* Wedding venues section */
 .wedding-venues {
-  background-image: url('img/optimized/sky-background-large.jpeg');
+  background-image: url('img/optimized/blue-background-large.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -364,7 +364,7 @@ section {
 
 /* Wedding timeline section */
 .wedding-timeline {
-  background-image: url('img/optimized/sky-background-large.jpeg');
+  background-image: url('img/optimized/blue-background-large.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -398,7 +398,7 @@ section {
 
 /* Guest attire section */
 .guest-attire {
-  background-image: url('img/optimized/beige-background-large.jpeg');
+  background-image: url('img/optimized/beige-background-large.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -506,7 +506,7 @@ section {
 
 /* Entourage section */
 .entourage {
-  background-image: url('img/optimized/beige-background-large.jpeg');
+  background-image: url('img/optimized/beige-background-large.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -614,7 +614,7 @@ section {
 
 /* Principal Sponsors section */
 .principal-sponsors {
-  background-image: url('img/optimized/beige-background-large.jpeg');
+  background-image: url('img/optimized/beige-background-large.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -829,6 +829,7 @@ section {
   }
 
   .wedding-venues {
+    padding: 10%;
     flex-direction: column;
   }
   .wedding-venues__content,
@@ -1466,10 +1467,6 @@ section {
     padding: 1em 0;
   }
 
-  .story {
-    background-image: url('img/optimized/beige-background-large.jpeg');
-    background-repeat: repeat;
-  }
 
   .wedding-venues {
     min-height: auto;
@@ -1484,7 +1481,7 @@ section {
 
 /* FAQs section */
 .faqs {
-  background-color: #5286a8;
+  background-image: url('img/optimized/blue-background-large.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
