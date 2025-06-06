@@ -94,7 +94,7 @@ section {
 
 .invitation__content {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   text-align: center;
   background-image: url('img/optimized/page-2-large.jpg');
@@ -103,19 +103,44 @@ section {
   background-repeat: no-repeat;
   width: 80%;
   height: 80vh;
+  flex-direction: column;
+  gap: 1.5em;
+  padding-bottom: 5%;
 }
 
 .invitation__text {
-  align-self: last baseline;
-  padding-bottom: 5%;
-  padding-left: 2%;
-  padding-right: 2%;
-  margin: 0;
   font-family: 'Pinyon Script';
   color: #eae4cc;
   font-size: 3rem;
   font-style: oblique;
   font-weight: 100;
+  margin: 0;
+}
+
+.invitation__rsvp-button {
+  display: inline-block;
+  padding: 0.8em 2.5em;
+  background-color: transparent;
+  border: 2px solid #eae4cc;
+  color: #eae4cc;
+  font-family: 'TT Hoves';
+  font-size: 1.1em;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  margin-bottom: 1em;
+}
+
+.invitation__rsvp-button:hover {
+  background-color: #eae4cc;
+  color: #2f556e;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.invitation__rsvp-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Story section */
