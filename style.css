@@ -372,7 +372,6 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -385,6 +384,25 @@ section {
   width: 100%;
   max-width: 1200px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2em;
+  box-sizing: border-box;
+}
+
+.wedding-timeline__image {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2em auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background-image: url('img/optimized/timeline-large.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 16/9;
 }
 
 .wedding-timeline__heading {
@@ -963,6 +981,11 @@ section {
   .principal-sponsors__footer-text {
     font-size: 2em;
   }
+
+  .wedding-timeline__image {
+    max-width: 700px;
+    background-image: url('img/optimized/timeline-medium.png');
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1093,6 +1116,10 @@ section {
     font-size: 1.8em;
     letter-spacing: 0.1em;
   }
+
+  .wedding-timeline__image {
+    max-width: 500px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1220,6 +1247,11 @@ section {
   .principal-sponsors__footer-text {
     font-size: 1.5em;
     letter-spacing: 0.08em;
+  }
+
+  .wedding-timeline__image {
+    max-width: 350px;
+    background-image: url('img/optimized/timeline-small.png');
   }
 }
 
@@ -1358,6 +1390,10 @@ section {
   .entourage__grid {
     padding: 0 5%;
   }
+
+  .wedding-timeline__image {
+    max-width: 280px;
+  }
 }
 
 /* Ultra small devices */
@@ -1431,6 +1467,10 @@ section {
   .principal-sponsors__footer-text {
     font-size: 0.9em;
   }
+
+  .wedding-timeline__image {
+    max-width: 280px;
+  }
 }
 
 /* Handle very small heights */
@@ -1455,7 +1495,7 @@ section {
 
 /* FAQs section */
 .faqs {
-  background-image: url('img/optimized/blue-background-large.jpg');
+  background-image: url('img/optimized/dark-blue-background-large.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
