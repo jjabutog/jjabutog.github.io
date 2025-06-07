@@ -2,7 +2,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
 }
@@ -21,6 +21,7 @@ section {
   position: relative; 
   width: 100%;
   min-height: 100vh;
+  padding: 4rem 0;
 }
 
 /* Animation keyframes */
@@ -42,7 +43,7 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -138,7 +139,6 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
   min-height: 100vh;
 }
 
@@ -152,7 +152,7 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   width: 80%;
-  height: 80vh;
+  min-height: 80vh;
   flex-direction: column;
   gap: 1.5em;
   padding-bottom: 5%;
@@ -303,25 +303,44 @@ section {
 
 /* Wedding venues section */
 .wedding-venues {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 6em 2em;  /* Increased padding */
+  box-sizing: border-box;
+  overflow: visible;  /* Changed from hidden to visible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wedding-venues-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('img/optimized/blue-background-large.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4em 2em;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  will-change: opacity;
+}
+
+.wedding-venues.active .wedding-venues-background {
+  opacity: 1;
 }
 
 .wedding-venues__content {
-  flex: 1;
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 1200px;
   text-align: center;
+  background: transparent;
 }
 
 .wedding-venues__heading {
@@ -339,11 +358,11 @@ section {
 .wedding-venues__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2em;
-  padding: 0 2em;
+  gap: 3em;  /* Increased gap */
+  padding: 2em;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: start;
+  align-items: stretch;  /* Changed from start to stretch */
   justify-content: center;
   width: 100%;
   box-sizing: border-box;
@@ -363,7 +382,8 @@ section {
   justify-content: flex-start;
   width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;  /* Changed from hidden to visible */
+  height: 100%;  /* Added height */
 }
 
 .venue-card:hover {
@@ -384,8 +404,8 @@ section {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 320px;
-  max-height: 350px;
+  min-height: 280px;  /* Reduced from 320px */
+  max-height: 320px;
   padding: 0.5em;
   box-sizing: border-box;
 }
@@ -442,28 +462,45 @@ section {
 
 /* Wedding timeline section */
 .wedding-timeline {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 4em 2em;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.wedding-timeline-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url('img/optimized/blue-background-large.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4em 2em;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.wedding-timeline.active .wedding-timeline-background {
+  opacity: 1;
 }
 
 .wedding-timeline__content {
-  width: 100%;
-  max-width: 1200px;
-  text-align: center;
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 2em;
-  box-sizing: border-box;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .wedding-timeline__image {
@@ -983,12 +1020,12 @@ section {
 
 @media screen and (max-width: 1024px) {
   .wedding-venues {
-    padding: 3em 1.5em;
+    padding: 4em 1.5em;
   }
 
   .wedding-venues__grid {
-    max-width: 900px;
-    padding: 0 1.5em;
+    gap: 2em;
+    padding: 1.5em;
   }
 
   .venue-card {
@@ -996,8 +1033,8 @@ section {
   }
   
   .venue-card__image {
-    min-height: 280px;
-    max-height: 300px;
+    min-height: 240px;
+    max-height: 280px;
   }
 
   .story__photo-container {
@@ -1109,8 +1146,9 @@ section {
 
   .wedding-venues__grid {
     grid-template-columns: 1fr;
-    max-width: 300px;
-    padding: 0 1em;
+    max-width: 250px;  /* Reduced from 500px to 250px */
+    padding: 1em;
+    gap: 2em;
   }
 
   .venue-card {
@@ -1118,8 +1156,8 @@ section {
   }
   
   .venue-card__image {
-    min-height: 240px;
-    max-height: 260px;
+    min-height: 110px;  /* Reduced from 220px */
+    max-height: 130px;  /* Reduced from 260px */
   }
   .church-image {
     background-image: url('img/optimized/church-photo-small.png');
@@ -1132,17 +1170,19 @@ section {
     grid-template-columns: 1fr;
     gap: 2em;
     padding: 0 15%;
+    max-width: 250px;  /* Added max-width */
+    margin: 0 auto;
   }
 
   .guest-attire-card {
     padding: 2em;
-    max-width: 500px;
+    max-width: 250px;  /* Reduced from 500px */
     margin: 0 auto;
   }
 
   .guest-attire-card__image {
-    min-height: 220px;
-    max-height: 260px;
+    min-height: 110px;  /* Reduced from 220px */
+    max-height: 130px;  /* Reduced from 260px */
   }
 
   .entourage {
@@ -1160,17 +1200,19 @@ section {
     grid-template-columns: 1fr;
     gap: 2em;
     padding: 0 15%;
+    max-width: 250px;  /* Added max-width */
+    margin: 0 auto;
   }
 
   .entourage-card {
     padding: 2em;
-    max-width: 500px;
+    max-width: 250px;  /* Reduced from 500px */
     margin: 0 auto;
   }
 
   .entourage-card__image {
-    min-height: 220px;
-    max-height: 260px;
+    min-height: 110px;  /* Reduced from 220px */
+    max-height: 130px;  /* Reduced from 260px */
   }
 
   .principal-sponsors {
@@ -1188,17 +1230,19 @@ section {
     grid-template-columns: 1fr;
     gap: 2em;
     padding: 0 15%;
+    max-width: 250px;  /* Added max-width */
+    margin: 0 auto;
   }
 
   .principal-sponsors-card {
     padding: 2em;
-    max-width: 500px;
+    max-width: 250px;  /* Reduced from 500px */
     margin: 0 auto;
   }
 
   .principal-sponsors-card__image {
-    min-height: 220px;
-    max-height: 260px;
+    min-height: 110px;  /* Reduced from 220px */
+    max-height: 130px;  /* Reduced from 260px */
   }
 
   .principal-sponsors-card__description {
@@ -1225,7 +1269,7 @@ section {
   .wedding-venues,
   .wedding-timeline,
   .guest-attire {
-    padding: 2em 0.8em;
+    padding: 3em 1em;
   }
 
   .wedding-venues__heading,
@@ -1237,8 +1281,8 @@ section {
   }
 
   .wedding-venues__grid {
-    max-width: 250px;
-    padding: 0 0.8em;
+    max-width: 400px;  /* Increased from 250px */
+    padding: 0.8em;
   }
 
   .venue-card {
@@ -1594,24 +1638,44 @@ section {
 
 /* FAQs section */
 .faqs {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 4em 2em;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.faqs-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url('img/optimized/dark-blue-background-large.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4em 2em;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.faqs.active .faqs-background {
+  opacity: 1;
 }
 
 .faqs__content {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -1667,17 +1731,14 @@ section {
   margin: 0;
 }
 
-@media screen and (max-width: 1024px) {
-  .faqs__grid {
-    gap: 1.5em;
+@media screen and (max-width: 1200px) {
+  .wedding-venues-background,
+  .wedding-timeline-background {
+    background-image: url('img/optimized/blue-background-large.jpg');
   }
-
-  .faq-item__question {
-    font-size: 1.8em;
-  }
-
-  .faq-item__answer {
-    font-size: 1.1em;
+  
+  .faqs-background {
+    background-image: url('img/optimized/dark-blue-background-large-mobile.jpg');
   }
 }
 
@@ -1703,6 +1764,10 @@ section {
 }
 
 @media screen and (max-width: 480px) {
+  .faqs-background {
+    background-image: url('img/optimized/dark-blue-background-large-mobile.jpg');
+  }
+
   .faqs {
     padding: 2em 1em;
   }
@@ -1766,6 +1831,10 @@ section {
 @media screen and (max-width: 768px) {
   .faqs {
     padding: 3em 1.5em;
+  }
+
+  .faqs::before {
+    background-image: url('img/optimized/dark-blue-background-large-mobile.jpg');
   }
 
   .faqs__heading {
