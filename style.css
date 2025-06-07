@@ -1171,8 +1171,10 @@ section {
     max-width: 500px;
   }
 
+  .guest-attire-card:nth-child(2),
+  .entourage-card:nth-child(2),
   .principal-sponsors-card:nth-child(2) {
-    margin-top: 0;  /* Remove the extra space on mobile */
+    margin-top: 0;
   }
 }
 
@@ -1698,5 +1700,74 @@ section {
 
   .faq-item__answer {
     font-size: 0.9em;
+  }
+}
+
+/* Add the same style for guest attire and entourage middle cards */
+.guest-attire-card:nth-child(2) {
+  margin-top: 4em;  /* Add space at the top to move it down */
+}
+
+.entourage-card:nth-child(2) {
+  margin-top: 4em;  /* Add space at the top to move it down */
+}
+
+/* Add specific style for the middle cards */
+.principal-sponsors-card:nth-child(2),
+.guest-attire-card:nth-child(2),
+.entourage-card:nth-child(2) {
+  margin-top: 4em;  /* Add space at the top to move it down */
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .faqs {
+    padding: 3em 1.5em;
+  }
+
+  .faqs__heading {
+    font-size: 2.8em;
+    margin-bottom: 1em;
+  }
+
+  .faqs__grid {
+    grid-template-columns: 1fr;
+    padding: 0 15%;
+  }
+
+  .faq-item {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .wedding-venues__grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    padding: 0 1em;
+  }
+
+  .guest-attire__grid {
+    grid-template-columns: 1fr;
+    gap: 2em;
+    padding: 0 15%;
+  }
+
+  .entourage__grid {
+    grid-template-columns: 1fr;
+    gap: 2em;
+    padding: 0 15%;
+  }
+
+  .principal-sponsors__grid {
+    grid-template-columns: 1fr;
+    gap: 2em;
+    padding: 0 15%;
+  }
+
+  /* Reset margin for middle cards on mobile */
+  .principal-sponsors-card:nth-child(2),
+  .guest-attire-card:nth-child(2),
+  .entourage-card:nth-child(2) {
+    margin-top: 0 !important;  /* Use !important to ensure override */
   }
 }
