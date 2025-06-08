@@ -48,17 +48,24 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .hero__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  justify-content: space-between;
+  min-height: 100vh;
   width: 100%;
   opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
   animation-delay: 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .hero__logo {
@@ -924,6 +931,9 @@ section {
     content: url('img/optimized/title-medium.png');
     width: 600px;
   }
+  .hero__subheading {
+    font-size: 2.5rem; /* Reduced from 3rem */
+  }
   .invitation__content {
     background-image: url('img/optimized/page-2-medium.jpg');
   }
@@ -952,7 +962,7 @@ section {
     width: 300px;
   }
   .hero__subheading {
-    font-size: 2em;
+    font-size: 1.5rem;
   }
   .hero__details {
     font-size: 1em;
@@ -1263,6 +1273,10 @@ section {
   .principal-sponsors-card:nth-child(2) {
     margin-top: 0;
   }
+
+  .hero__subheading {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1395,6 +1409,10 @@ section {
   .wedding-timeline__image {
     max-width: 350px;
     background-image: url('img/optimized/timeline-small.png');
+  }
+
+  .hero__subheading {
+    font-size: 1.2rem;
   }
 }
 
@@ -1537,6 +1555,10 @@ section {
   .wedding-timeline__image {
     max-width: 280px;
   }
+
+  .hero__subheading {
+    font-size: 1.2rem;
+  }
 }
 
 /* Ultra small devices */
@@ -1613,6 +1635,10 @@ section {
 
   .wedding-timeline__image {
     max-width: 280px;
+  }
+
+  .hero__subheading {
+    font-size: 1.2rem;
   }
 }
 
