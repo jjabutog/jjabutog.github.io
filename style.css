@@ -49,6 +49,7 @@ section {
   align-items: center;
   justify-content: center;
   position: relative;
+  opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
   animation-delay: 0.3s;
 }
@@ -356,6 +357,7 @@ section {
   justify-content: center;
 }
 
+
 .wedding-venues-background {
   position: fixed;
   top: 0;
@@ -383,6 +385,14 @@ section {
   max-width: 1200px;
   text-align: center;
   background: transparent;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+}
+
+.wedding-venues.active .wedding-venues__content {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .wedding-venues__heading {
@@ -543,7 +553,16 @@ section {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
 }
+
+.wedding-timeline.active .wedding-timeline__content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 .wedding-timeline__image {
   flex: 1;
@@ -585,14 +604,29 @@ section {
   padding: 4em 2em;
   box-sizing: border-box;
   overflow-x: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.guest-attire.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .guest-attire__content {
   display: flex;
   flex-direction: column;
   width: 100%;
-  /*max-width: 1200px;*/
   text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+}
+
+.guest-attire.active .guest-attire__content {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .guest-attire__heading {
@@ -605,6 +639,14 @@ section {
   letter-spacing: 0.15em;
   line-height: 1.2;
   text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out 0.6s, transform 1s ease-out 0.6s;
+}
+
+.guest-attire.active .guest-attire__heading {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .guest-attire__grid {
@@ -693,6 +735,14 @@ section {
   padding: 4em 2em;
   box-sizing: border-box;
   overflow-x: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.entourage.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .entourage__content {
@@ -700,6 +750,14 @@ section {
   flex-direction: column;
   width: 100%;
   text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+}
+
+.entourage.active .entourage__content {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .entourage__heading {
@@ -712,6 +770,14 @@ section {
   letter-spacing: 0.15em;
   line-height: 1.2;
   text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out 0.6s, transform 1s ease-out 0.6s;
+}
+
+.entourage.active .entourage__heading {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .entourage__grid {
@@ -801,6 +867,14 @@ section {
   padding: 4em 2em;
   box-sizing: border-box;
   overflow-x: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.principal-sponsors.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .principal-sponsors__content {
@@ -809,6 +883,14 @@ section {
   width: 100%;
   text-align: center;
   position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+}
+
+.principal-sponsors.active .principal-sponsors__content {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .principal-sponsors__heading {
@@ -821,6 +903,14 @@ section {
   letter-spacing: 0.15em;
   line-height: 1.2;
   text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out 0.6s, transform 1s ease-out 0.6s;
+}
+
+.principal-sponsors.active .principal-sponsors__heading {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .principal-sponsors__grid {
@@ -1748,6 +1838,14 @@ section {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+}
+
+.faqs.active .faqs__content {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .faqs__heading {

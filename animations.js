@@ -61,7 +61,7 @@ function isElementInViewport(el) {
 
 // Function to update section visibility and trigger animations
 function updateSectionVisibility() {
-    const sections = document.querySelectorAll('.wedding-venues, .wedding-timeline, .invitation, .story, .faqs');
+    const sections = document.querySelectorAll('.wedding-venues, .wedding-timeline, .invitation, .story, .faqs, .guest-attire, .entourage, .principal-sponsors');
     
 
     sections.forEach(section => {
