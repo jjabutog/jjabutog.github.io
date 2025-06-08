@@ -50,27 +50,34 @@ function isInViewport(element) {
   return isVisible;
 }
 
-// Section visibility handler
+// Function to check if an element is in viewport
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.75 &&
+        rect.bottom >= 0
+    );
+}
+
+// Function to update section visibility and trigger animations
 function updateSectionVisibility() {
-  debug.log('Updating section visibility');
-  const sections = document.querySelectorAll('.wedding-venues, .wedding-timeline, .faqs');
-  
-  sections.forEach(section => {
-    const isVisible = isInViewport(section);
-    const className = section.className.split(' ')[0];
+    const sections = document.querySelectorAll('.wedding-venues, .wedding-timeline, .invitation, .story, .faqs');
     
-    if (isVisible) {
-      if (!section.classList.contains('active')) {
-        section.classList.add('active');
-        debug.log(`${className} is now active`);
-      }
-    } else {
-      if (section.classList.contains('active')) {
-        section.classList.remove('active');
-        debug.log(`${className} is now inactive`);
-      }
-    }
-  });
+
+    sections.forEach(section => {
+        if (isElementInViewport(section) && !section.classList.contains('active')) {
+            section.classList.add('active');
+            debug.log(`${section.className} is now active`);
+        } 
+        
+        if (isElementInViewport(section) && !section.classList.contains('background_active')) {
+            section.classList.add('background_active');
+            debug.log(`${section.className} is now background active`);
+        } else if (!isElementInViewport(section) && section.classList.contains('background_active')) {
+            section.classList.remove('background_active');
+            debug.log(`${section.className} is now background inactive`);
+        }
+    });
 }
 
 // Event handlers

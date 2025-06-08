@@ -49,6 +49,8 @@ section {
   align-items: center;
   justify-content: center;
   position: relative;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.3s;
 }
 
 .hero__container {
@@ -60,7 +62,7 @@ section {
   width: 100%;
   opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
-  animation-delay: 1s;
+  animation-delay: 0.3s;
   position: absolute;
   top: 0;
   left: 0;
@@ -148,6 +150,14 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.invitation.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .invitation__content {
@@ -164,6 +174,14 @@ section {
   flex-direction: column;
   gap: 1.5em;
   padding-bottom: 5%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+}
+
+.invitation.active .invitation__content {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .invitation__text {
@@ -212,6 +230,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.story.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .story__content {
@@ -224,6 +250,14 @@ section {
   padding: 3em;
   position: relative;
   z-index: 2;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+}
+
+.story.active .story__content {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .story__media {
@@ -338,7 +372,7 @@ section {
   will-change: opacity;
 }
 
-.wedding-venues.active .wedding-venues-background {
+.wedding-venues.background_active .wedding-venues-background {
   opacity: 1;
 }
 
@@ -494,7 +528,7 @@ section {
   pointer-events: none;
 }
 
-.wedding-timeline.active .wedding-timeline-background {
+.wedding-timeline.background_active .wedding-timeline-background {
   opacity: 1;
 }
 
@@ -1699,7 +1733,7 @@ section {
   pointer-events: none;
 }
 
-.faqs.active .faqs-background {
+.faqs.background_active .faqs-background {
   opacity: 1;
 }
 
