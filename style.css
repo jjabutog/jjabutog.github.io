@@ -1536,8 +1536,9 @@ section {
   }
 
   .wedding-timeline__image {
-    max-width: 350px;
-    background-image: url('img/optimized/timeline-small.png');
+    max-width: 250px;
+    background-image: url('img/optimized/timeline-vertical-small.png');
+    aspect-ratio: 9/16;
   }
 
   .hero__subheading {
@@ -1684,7 +1685,7 @@ section {
   }
 
   .wedding-timeline__image {
-    max-width: 280px;
+    max-width: 380px;
   }
 
   .hero__subheading {
