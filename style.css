@@ -349,14 +349,14 @@ section {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 6em 2em;  /* Increased padding */
+  padding: 6em 2em;
   box-sizing: border-box;
-  overflow: visible;  /* Changed from hidden to visible */
+  overflow: visible;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
-
 
 .wedding-venues-background {
   position: fixed;
@@ -388,6 +388,9 @@ section {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .wedding-venues.active .wedding-venues__content {
@@ -410,11 +413,11 @@ section {
 .wedding-venues__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 3em;  /* Increased gap */
+  gap: 3em;
   padding: 2em;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: stretch;  /* Changed from start to stretch */
+  align-items: stretch;
   justify-content: center;
   width: 100%;
   box-sizing: border-box;
@@ -1258,9 +1261,9 @@ section {
 
 @media screen and (max-width: 768px) {
   .wedding-venues {
-    height: auto;
-    min-height: 100vh;
     padding: 4em 1em;
+    height: auto;
+    min-height: auto;
   }
 
   .wedding-timeline {
@@ -1284,9 +1287,8 @@ section {
 
   .wedding-venues__grid {
     grid-template-columns: 1fr;
-    max-width: 250px;  /* Reduced from 500px to 250px */
-    padding: 1em;
-    gap: 2em;
+    max-width: 300px;
+    padding: 0 1em;
   }
 
   .venue-card {
@@ -1409,9 +1411,7 @@ section {
 }
 
 @media screen and (max-width: 480px) {
-  .wedding-venues,
-  .wedding-timeline,
-  .guest-attire {
+  .wedding-venues {
     padding: 3em 1em;
   }
 
