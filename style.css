@@ -146,7 +146,7 @@ section {
 
 /* Invitation section */
 .invitation {
-  background-image: url('img/optimized/beige-background-large.jpg');
+  background-image: url('img/optimized/coral-beige-background-large.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -222,10 +222,6 @@ section {
 
 /* Story section */
 .story {
-  background-image: url('img/optimized/beige-background-large.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -234,6 +230,19 @@ section {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s ease-out, transform 1s ease-out;
+  position: relative;
+}
+
+.story-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('img/optimized/coral-beige-background-large.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .story.active {
@@ -1111,6 +1120,9 @@ section {
   .story {
     flex-direction: column;
   }
+  .story-background {
+    background-image: url('img/optimized/coral-beige-background-mobile-small.jpeg');
+  }
   .story__content,
   .story__media {
     width: 100%;
@@ -1257,9 +1269,21 @@ section {
     max-width: 700px;
     background-image: url('img/optimized/timeline-medium.png');
   }
+
+  .story-background {
+    background-image: url('img/optimized/coral-beige-background-mobile-large.jpeg');
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .semi-formal-image {
+    background-image: url('img/optimized/guest-color-palette-mobile-large.png');
+  }
+
+  .formal-image {
+    background-image: url('img/optimized/entourage-color-palette-mobile-large.png');
+  }
+
   .wedding-venues {
     padding: 4em 1em;
     height: auto;
@@ -1306,24 +1330,10 @@ section {
     background-image: url('img/optimized/reception-icon-small.png');
   }
 
-  .guest-attire__grid {
-    grid-template-columns: 1fr;
-    gap: 2em;
-    padding: 0 15%;
-    max-width: 250px;  /* Added max-width */
-    margin: 0 auto;
-  }
 
-  .guest-attire-card {
-    padding: 2em;
-    max-width: 250px;  /* Reduced from 500px */
-    margin: 0 auto;
-  }
 
-  .guest-attire-card__image {
-    min-height: 110px;  /* Reduced from 220px */
-    max-height: 130px;  /* Reduced from 260px */
-  }
+
+  
 
   .entourage {
     height: auto;
@@ -1336,24 +1346,8 @@ section {
     margin: 0 0 1em 0;
   }
 
-  .entourage__grid {
-    grid-template-columns: 1fr;
-    gap: 2em;
-    padding: 0 15%;
-    max-width: 250px;  /* Added max-width */
-    margin: 0 auto;
-  }
 
-  .entourage-card {
-    padding: 2em;
-    max-width: 250px;  /* Reduced from 500px */
-    margin: 0 auto;
-  }
 
-  .entourage-card__image {
-    min-height: 110px;  /* Reduced from 220px */
-    max-height: 130px;  /* Reduced from 260px */
-  }
 
   .principal-sponsors {
     height: auto;
@@ -1366,24 +1360,8 @@ section {
     margin: 0 0 1em 0;
   }
 
-  .principal-sponsors__grid {
-    grid-template-columns: 1fr;
-    gap: 2em;
-    padding: 0 15%;
-    max-width: 250px;  /* Added max-width */
-    margin: 0 auto;
-  }
 
-  .principal-sponsors-card {
-    padding: 2em;
-    max-width: 250px;  /* Reduced from 500px */
-    margin: 0 auto;
-  }
 
-  .principal-sponsors-card__image {
-    min-height: 110px;  /* Reduced from 220px */
-    max-height: 130px;  /* Reduced from 260px */
-  }
 
   .principal-sponsors-card__description {
     font-size: 1.2em;
