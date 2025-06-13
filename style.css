@@ -970,11 +970,6 @@ section {
   width: 100%;
 }
 
-/* Add specific style for the middle card (color palette) */
-.principal-sponsors-card:nth-child(2) {
-  margin-top: 4em;  /* Add space at the top to move it down */
-}
-
 .principal-sponsors-card__title {
   font-family: 'Pinyon Script';
   color: #6d532a;
@@ -1881,6 +1876,13 @@ section {
   text-align: center;
 }
 
+/* Add specific style for the middle cards */
+.principal-sponsors-card:nth-child(2),
+.guest-attire-card:nth-child(2),
+.entourage-card:nth-child(2) {
+  margin-top: 4em;  /* Add space at the top to move it down */
+}
+
 @media screen and (max-width: 1200px) {
   .wedding-venues-background,
   .wedding-timeline-background {
@@ -1913,7 +1915,7 @@ section {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .faqs-background {
     background-image: url('img/optimized/dark-blue-background-large-mobile.jpg');
   }
@@ -1941,6 +1943,18 @@ section {
   .faq-item__answer {
     font-size: 1em;
   }
+
+  .guest-attire-card:nth-child(2),
+  .entourage-card:nth-child(2),
+  .principal-sponsors-card:nth-child(2) {
+    padding: 0;
+  }
+
+  .entourage-card__image,
+  .guest-attire-card__image {
+    min-height: 110px;
+    max-height: 130px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -1959,22 +1973,6 @@ section {
   .faq-item__answer {
     font-size: 0.9em;
   }
-}
-
-/* Add the same style for guest attire and entourage middle cards */
-.guest-attire-card:nth-child(2) {
-  margin-top: 4em;  /* Add space at the top to move it down */
-}
-
-.entourage-card:nth-child(2) {
-  margin-top: 4em;  /* Add space at the top to move it down */
-}
-
-/* Add specific style for the middle cards */
-.principal-sponsors-card:nth-child(2),
-.guest-attire-card:nth-child(2),
-.entourage-card:nth-child(2) {
-  margin-top: 4em;  /* Add space at the top to move it down */
 }
 
 /* Media queries */
