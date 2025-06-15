@@ -1210,11 +1210,6 @@ section {
     font-size: 2.5em;
   }
 
-  .guest-attire-card__image {
-    min-height: 240px;
-    max-height: 280px;
-  }
-
   .guest-attire-card__description {
     font-size: 1.2em;
   }
@@ -1242,11 +1237,6 @@ section {
 
   .principal-sponsors-card__title {
     font-size: 2.5em;
-  }
-
-  .principal-sponsors-card__image {
-    min-height: 240px;
-    max-height: 280px;
   }
 
   .principal-sponsors-card__description {
@@ -1291,7 +1281,7 @@ section {
   .guest-attire {
     height: auto;
     min-height: 100vh;
-    padding: 4em 1em;
+    padding: 4em 0;
   }
 
   .wedding-venues__heading,
@@ -1322,15 +1312,10 @@ section {
     background-image: url('img/optimized/reception-icon-small.png');
   }
 
-
-
-
-  
-
   .entourage {
     height: auto;
     min-height: 100vh;
-    padding: 4em 1em;
+    padding: 4em 0;
   }
 
   .entourage__heading {
@@ -1338,22 +1323,16 @@ section {
     margin: 0 0 1em 0;
   }
 
-
-
-
   .principal-sponsors {
     height: auto;
     min-height: 100vh;
-    padding: 4em 1em;
+    padding: 4em 0;
   }
 
   .principal-sponsors__heading {
     font-size: 2.8em;
     margin: 0 0 1em 0;
   }
-
-
-
 
   .principal-sponsors-card__description {
     font-size: 1.2em;
@@ -1372,6 +1351,7 @@ section {
   .entourage-card:nth-child(2),
   .principal-sponsors-card:nth-child(2) {
     margin-top: 0;
+    padding: 0 3em;
   }
 
   .hero__subheading {
@@ -1418,11 +1398,7 @@ section {
   }
 
   .guest-attire__grid {
-    padding: 0 10%;
-  }
-
-  .guest-attire-card {
-    padding: 1.5em;
+    padding: 0 2%;
   }
 
   .guest-attire-card__title {
@@ -1430,26 +1406,18 @@ section {
   }
 
   .guest-attire-card__image {
-    min-height: 200px;
-    max-height: 240px;
+    min-height: 250px;
+    max-height: 300px;
   }
 
   .guest-attire-card__description {
     font-size: 1.1em;
   }
 
-  .entourage {
-    padding: 2em 0.8em;
-  }
-
   .entourage__heading {
     font-size: 1.8em;
     letter-spacing: 0.08em;
     margin: 0 0 0.8em 0;
-  }
-
-  .entourage__grid {
-    padding: 0 10%;
   }
 
   .entourage-card {
@@ -1470,7 +1438,7 @@ section {
   }
 
   .principal-sponsors {
-    padding: 2em 0.8em;
+    padding: 2em 0;
   }
 
   .principal-sponsors__heading {
@@ -1489,11 +1457,6 @@ section {
 
   .principal-sponsors-card__title {
     font-size: 2em;
-  }
-
-  .principal-sponsors-card__image {
-    min-height: 200px;
-    max-height: 240px;
   }
 
   .principal-sponsors-card__description {
@@ -1590,15 +1553,6 @@ section {
     max-height: 180px;
   }
 
-  .guest-attire-card {
-    padding: 0.5em;
-  }
-
-  .guest-attire-card__image {
-    min-height: 160px;
-    max-height: 200px;
-  }
-
   .guest-attire-card__title {
     font-size: 1.2em;
     margin: 0 0 0.2em 0;
@@ -1611,7 +1565,7 @@ section {
   }
 
   .entourage {
-    padding: 1em 0.3em;
+    padding: 1em 0;
     min-height: auto;
     height: auto;
   }
@@ -1636,22 +1590,8 @@ section {
     line-height: 1.2;
   }
 
-  .principal-sponsors {
-    padding: 1em 0.3em;
-    min-height: auto;
-    height: auto;
-  }
-
   .principal-sponsors-card {
     padding: 0.5em;
-  }
-
-  .guest-attire__grid {
-    padding: 0 5%;
-  }
-
-  .entourage__grid {
-    padding: 0 5%;
   }
 
   .wedding-timeline__image {
@@ -1716,16 +1656,12 @@ section {
   }
 
   .entourage {
-    padding: 0.8em 0.2em;
+    padding: 0.8em 0;
   }
 
   .entourage__heading {
     font-size: 1em;
     margin: 0 0 0.4em 0;
-  }
-
-  .principal-sponsors {
-    padding: 0.8em 0.2em;
   }
 
   .principal-sponsors__heading {
@@ -1944,14 +1880,9 @@ section {
   .guest-attire-card:nth-child(2),
   .entourage-card:nth-child(2),
   .principal-sponsors-card:nth-child(2) {
-    padding: 0;
+    padding: 0 2em;
   }
 
-  .entourage-card__image,
-  .guest-attire-card__image {
-    min-height: 110px;
-    max-height: 130px;
-  }
 }
 
 @media screen and (max-width: 320px) {
@@ -2006,19 +1937,19 @@ section {
   .guest-attire__grid {
     grid-template-columns: 1fr;
     gap: 2em;
-    padding: 0 15%;
+    padding: 0 1%;
   }
 
   .entourage__grid {
     grid-template-columns: 1fr;
     gap: 2em;
-    padding: 0 15%;
+    padding: 0;
   }
 
   .principal-sponsors__grid {
     grid-template-columns: 1fr;
     gap: 2em;
-    padding: 0 15%;
+    padding: 0;
   }
 
   /* Reset margin for middle cards on mobile */
