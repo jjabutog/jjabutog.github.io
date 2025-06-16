@@ -125,4 +125,87 @@ document.addEventListener('DOMContentLoaded', () => {
   updateSectionVisibility();
   
   debug.log('Initialization complete');
+});
+
+// Mobile menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const navbarToggle = document.querySelector('.navbar__toggle');
+  const navbarMenu = document.querySelector('.navbar__menu');
+  const navbar = document.querySelector('.navbar');
+  let lastScrollTop = 0;
+  const isMobile = window.innerWidth <= 768;
+
+  // Function to handle navbar visibility based on scroll direction
+  function handleScroll() {
+    // Only handle scroll-based visibility on desktop
+    if (isMobile) return;
+
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Show navbar when scrolling up or at the top of the page
+    if (scrollTop < lastScrollTop || scrollTop === 0) {
+      navbar.classList.add('visible');
+    } else {
+      navbar.classList.remove('visible');
+    }
+    
+    lastScrollTop = scrollTop;
+  }
+
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScroll);
+
+  // Handle mobile menu toggle
+  navbarToggle.addEventListener('click', function() {
+    navbarMenu.classList.toggle('active');
+    this.classList.toggle('active');
+    
+    // On mobile, toggle navbar visibility with menu
+    if (isMobile) {
+      if (navbarMenu.classList.contains('active')) {
+        navbar.classList.add('visible');
+      } else {
+        navbar.classList.remove('visible');
+      }
+    }
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!navbarToggle.contains(event.target) && !navbarMenu.contains(event.target)) {
+      navbarMenu.classList.remove('active');
+      navbarToggle.classList.remove('active');
+      // Hide navbar on mobile when clicking outside
+      if (isMobile) {
+        navbar.classList.remove('visible');
+      }
+    }
+  });
+
+  // Close menu when clicking a link
+  const navbarLinks = document.querySelectorAll('.navbar__link');
+  navbarLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      navbarMenu.classList.remove('active');
+      navbarToggle.classList.remove('active');
+      // Hide navbar on mobile when clicking a link
+      if (isMobile) {
+        navbar.classList.remove('visible');
+      }
+    });
+  });
+
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    const newIsMobile = window.innerWidth <= 768;
+    if (newIsMobile !== isMobile) {
+      // If switching to mobile, hide navbar
+      if (newIsMobile) {
+        navbar.classList.remove('visible');
+      }
+    }
+  });
+
+  // Initial state - hide navbar by default
+  navbar.classList.remove('visible');
 }); 
