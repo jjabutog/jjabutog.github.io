@@ -1110,8 +1110,9 @@ section {
     background-image: url('img/optimized/page-2-small.jpg');
   }
   .invitation__text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 100;
+    text-shadow: 0 0 0.5px rgba(234, 228, 204, 0.2);
   }
   .story {
     flex-direction: column;
@@ -1325,6 +1326,13 @@ section {
   .entourage__heading {
     font-size: 2.8em;
     margin: 0 0 1em 0;
+  }
+
+  .invitation__text {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: lighter;
+    text-shadow: 0 0 0.5px rgba(234, 228, 204, 0.2);
   }
 
   .principal-sponsors {
