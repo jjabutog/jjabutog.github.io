@@ -138,19 +138,35 @@ document.addEventListener('DOMContentLoaded', function() {
   // Function to handle navbar visibility based on scroll direction
   function handleScroll() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     
-    // Show navbar when scrolling up or at the top of the page
-    if (scrollTop < lastScrollTop || scrollTop === 0) {
-      navbar.classList.add('visible');
+    // For iOS devices, use a more responsive approach
+    if (isIOS) {
+      // Show navbar when scrolling up or at the top of the page
+      if (scrollTop < lastScrollTop || scrollTop === 0) {
+        navbar.classList.add('visible');
+      } else {
+        // Add a small delay before hiding the navbar on iOS
+        setTimeout(() => {
+          if (scrollTop > lastScrollTop) {
+            navbar.classList.remove('visible');
+          }
+        }, 100);
+      }
     } else {
-      navbar.classList.remove('visible');
+      // Regular scroll behavior for non-iOS devices
+      if (scrollTop < lastScrollTop || scrollTop === 0) {
+        navbar.classList.add('visible');
+      } else {
+        navbar.classList.remove('visible');
+      }
     }
     
     lastScrollTop = scrollTop;
   }
 
-  // Add scroll event listener
-  window.addEventListener('scroll', handleScroll);
+  // Add scroll event listener with passive option for better performance
+  window.addEventListener('scroll', handleScroll, { passive: true });
 
   // Handle mobile menu toggle
   navbarToggle.addEventListener('click', function() {
