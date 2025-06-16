@@ -1718,32 +1718,13 @@ section {
 
 /* FAQs section */
 .faqs {
+  background-color: #5286a8;
   position: relative;
   width: 100%;
   min-height: 100vh;
   padding: 4em 2em;
   box-sizing: border-box;
   overflow: hidden;
-}
-
-.faqs-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('img/optimized/dark-blue-background-large.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-}
-
-.faqs.background_active .faqs-background {
-  opacity: 1;
 }
 
 .faqs__content {
@@ -1789,14 +1770,11 @@ section {
 }
 
 .faq-item {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 2em;
   text-align: left;
   transition: transform 0.3s ease;
-  border: 1px solid rgba(109, 83, 42, 0.1);
+  border: 2px solid #eae4cc;
 }
 
 .faq-item:hover {
@@ -1834,9 +1812,6 @@ section {
     background-image: url('img/optimized/blue-background-large.jpg');
   }
   
-  .faqs-background {
-    background-image: url('img/optimized/dark-blue-background-large-mobile.jpg');
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1861,10 +1836,6 @@ section {
 }
 
 @media screen and (max-width: 500px) {
-  .faqs-background {
-    background-image: url('img/optimized/dark-blue-background-large-mobile.jpg');
-  }
-
   .faqs {
     padding: 2em 1em;
   }
