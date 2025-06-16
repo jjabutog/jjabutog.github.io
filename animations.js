@@ -137,9 +137,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Function to handle navbar visibility based on scroll direction
   function handleScroll() {
-    // Only handle scroll-based visibility on desktop
-    if (isMobile) return;
-
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
     // Show navbar when scrolling up or at the top of the page
