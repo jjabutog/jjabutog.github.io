@@ -354,6 +354,60 @@ section {
   background-image: url('img/optimized/right-hand-drawing-large.png');
 }
 
+.proposal {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  position: relative;
+}
+
+.proposal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('img/optimized/photo-collage-large.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.proposal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.proposal__video-container {
+  position: relative;
+  width: 50%; /* Changed to 50% of screen width */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2em;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+}
+
+.proposal.active .proposal__video-container {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.proposal__video-container iframe {
+  width: 100%;
+  aspect-ratio: 9/16;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Wedding venues section */
 .wedding-venues {
   position: relative;
@@ -378,13 +432,7 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  will-change: opacity;
-}
-
-.wedding-venues.background_active .wedding-venues-background {
+  z-index: -2;
   opacity: 1;
 }
 
@@ -1263,6 +1311,17 @@ section {
 }
 
 @media screen and (max-width: 768px) {
+  .proposal__video-container {
+    width: 100%; /* Full width on mobile */
+    max-width: 320px;
+    padding: 1em;
+  }
+  
+  .proposal__video-container iframe {
+    aspect-ratio: 9/16;
+    max-height: 85vh;
+  }
+
   .semi-formal-image {
     background-image: url('img/optimized/guest-color-palette-mobile-large.png');
   }
@@ -2140,5 +2199,41 @@ section {
   .navbar__link {
     padding: 0.6rem 1rem;
     font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .proposal__video-container {
+    padding: 1em;
+    max-width: 320px; /* Slightly smaller for tablets */
+  }
+  
+  .proposal__video-container iframe {
+    aspect-ratio: 9/16;
+    max-height: 85vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .proposal__video-container {
+    padding: 0.8em;
+    max-width: 280px; /* Even smaller for mobile phones */
+  }
+  
+  .proposal__video-container iframe {
+    aspect-ratio: 9/16;
+    max-height: 80vh;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .proposal__video-container {
+    padding: 0.5em;
+    max-width: 240px; /* Smallest for very small devices */
+  }
+  
+  .proposal__video-container iframe {
+    aspect-ratio: 9/16;
+    max-height: 75vh;
   }
 }
